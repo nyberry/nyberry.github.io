@@ -12,8 +12,9 @@
                 <a href="index.html">Go back to Google Search</a>
             </div>
             <h1>Image search Page</h1>
-            <form action="https://www.google.com/search&udm=2" method="GET">
+            <form action="https://www.google.com/search" method="GET">
                 <input type="text" id="search" name="q">
+                <input type="hidden" name="tbm" value="isch">  <!-- This parameter specifies that it's an image search -->
                 <input type="submit" value="Search">
             </form>
         </div>
