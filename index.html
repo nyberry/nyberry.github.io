@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Search with Degu</title>
+<title>Image Search with Degu</title>
 </head>
 <body>
 
@@ -24,8 +24,8 @@ function searchWithDegu() {
   var inputText = document.getElementById("textInput").value.trim();
   if (inputText !== "") {
     var searchQuery = encodeURIComponent(inputText + " degu");
-    var googleSearchURL = "https://www.google.com/search?q=" + searchQuery;
-    window.location.href = googleSearchURL;
+    var googleImageSearchURL = "https://www.google.com/search?q=" + searchQuery + "&tbm=isch";
+    window.location.href = googleImageSearchURL;
   }
 }
 </script>
