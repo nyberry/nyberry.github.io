@@ -102,7 +102,7 @@
   <h1><span>S</span><span>B</span><span>R</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></h1>
   <form>
     <input type="text" id="textInput" name="textInput" placeholder="Search" onkeypress="handleKeyPress(event)" autofocus>
-    <button type="button" id="searchButton" onclick="triSearch()">Search</button>
+    <button type="button" id="searchButton" onclick="triSearch()">No beer</button>
     <button type="button" id="imageButton" onclick="imageSearch()">Beer</button>
   </form>
 </div>
@@ -110,7 +110,7 @@
 <script>
 function handleKeyPress(event) {
   if (event.key === "Enter") {
-    searchWithDegu();
+    triSearch();
     event.preventDefault(); // Prevent form submission
   }
 }
