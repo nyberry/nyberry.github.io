@@ -86,7 +86,7 @@
   <form>
     <input type="text" id="textInput" name="textInput" placeholder="Search" onkeypress="handleKeyPress(event)" autofocus>
     <button type="button" id="searchButton" onclick="triSearch()">Search</button>
-    <button type="button" id="imageButton" onclick="imageSearch()">Images</button>
+    <button type="button" id="imageButton" onclick="imageSearch()">Beer</button>
   </form>
 </div>
 
@@ -101,7 +101,7 @@ function handleKeyPress(event) {
 function triSearch() {
   var inputText = document.getElementById("textInput").value.trim();
   if (inputText !== "") {
-    var searchQuery = encodeURIComponent(inputText + " and triathlon and beer");
+    var searchQuery = encodeURIComponent(inputText + " and triathlon");
     var googleSearchURL = "https://www.google.com/search?q=" + searchQuery;
     window.location.href = googleSearchURL;
   }
@@ -111,7 +111,7 @@ function imageSearch() {
   var inputText = document.getElementById("textInput").value.trim();
   if (inputText !== "") {
     var searchQuery = encodeURIComponent(inputText + " and triathlon and beer");
-    var googleSearchURL = "https://www.google.com/search?q=" + searchQuery;
+    var googleSearchURL = "https://www.google.com/search?q=" + searchQuery + "&tbm=isch";
     window.location.href = googleSearchURL;
   }
 }
