@@ -9,10 +9,17 @@
 
 <form>
   <label for="textInput">Enter text:</label>
-  <input type="text" id="textInput" name="textInput" oninput="searchWithDegu()">
+  <input type="text" id="textInput" name="textInput" onkeypress="handleKeyPress(event)">
 </form>
 
 <script>
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+    searchWithDegu();
+    event.preventDefault(); // Prevent form submission
+  }
+}
+
 function searchWithDegu() {
   var inputText = document.getElementById("textInput").value.trim();
   if (inputText !== "") {
